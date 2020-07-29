@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: #330a0a;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#sidebar {
+  width: 220px;
+  height: 100%;
+  padding: 20px 0;
+  background-color: #111;
+  visibility: show;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: .4s ease-in;
+  transition: 250ms ease-in;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 1), 0 1px 2px rgba(0, 0, 0, 1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#sidebar .navbar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+}
+
+#sidebar .navbar-header .aduah-logo {
+  font-size: 1.5em;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 250ms ease-in;
+  transition: 250ms ease-in;
+  visibility: visible;
+}
+
+.navbar-body .nav-item {
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: 400ms all ease-in-out;
+  transition: 400ms all ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  background-color: #111;
+}
+
+.navbar-body .nav-item:hover {
+  background-color: #262626;
+  transition: 200ms ;
+}
+
+#main-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+
+}
+
+#main-content .check-box {
+  cursor: pointer;
+  display: inline-block;
+}
+
+#main-content .check-box .line {
+  width: 20px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  display: block;
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ #sidebar {
+  width: 0;
+  /*-webkit-animation: sidebarAnim .2s;
+          animation: sidebarAnim .2s;*/
+}
+
+#checkbox:checked ~ #sidebar .nav-item {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+#checkbox:checked ~ #sidebar .aduah-logo {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  visibility: hidden;
+}
+
+#checkbox:checked ~ #sidebar .navbar-header {
+  visibility: hidden;
+}
+
+@-webkit-keyframes sidebarAnim {
+  0% {
+    width: 220px;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    visibility: visible;
+  }
+  50% {
+    width: 220px;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+    -webkit-transform: translateX(-220px);
+            transform: translateX(-220px);
+    visibility: hidden;
+  }
+}
+
+@keyframes sidebarAnim {
+  0% {
+    width: 220px;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    visibility: visible;
+  }
+  50% {
+    width: 220px;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+    -webkit-transform: translateX(-220px);
+            transform: translateX(-220px);
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+
+
+
+#header {
+  filter: drop-shadow(0 0px 2px);
+  position: sticky;
+  top: -150px;
+  height: 200px;
+  width: 100%;
+  background-color: #222;
+  color: rgba(0, 0, 0, 1)
+  
+}
+
+#wrapper {
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 100%;
+
+}
+
+#socialMedia {
+  padding-left: 5px;
+  padding-top: 2px;
+  position: absolute;
+  bottom: 1px;
+  left: 0px;
+}
+
+.sm-button{
+  padding-left: 5px;
+  filter: invert(50%);
+  height: 40px;
+  transition-duration: .4s;
+}
+
+.sm-button:hover {
+  filter: invert(100%);
+  transition-duration: .4s;
+  cursor: pointer;
+}
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  }
+
+#menu {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  right: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #111;
+}
+
+li {
+  float: right;
+}
+
+
+li a {
+  font-size: 16px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+li a:hover {
+  background-color: #262626;
+  color: white;
+  transition-duration: .5s;
+}
+li a:active, a:focus {
+outline: 0;
+border: none;
+}
